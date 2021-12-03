@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 import "./styles/Header.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Link,
-  Outlet,
-} from "react-router-dom";
 
 function Header() {
   return (
@@ -20,6 +20,8 @@ function Header() {
       <div className="header__nav">
         <Link to="/checkout">
           <div className="header__optionBasket">
+          {/* <i  class="fas fa-shopping-basket"></i> */}
+          <FontAwesomeIcon icon="fas fa-shopping-basket" />
             <span className="header__optionLineTwo header__basketCount">0</span>
           </div>
         </Link>

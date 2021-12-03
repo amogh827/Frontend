@@ -1,18 +1,20 @@
 import React from "react";
 import "./styles/Product.css";
+import { Link } from "react-router-dom";
 
 function Product({ id, title, image, price, rating }) {
   return (
     <div className="product">
+      <img src={image} alt="productPhoto" />
       <div className="product__info">
-        <p>{title}</p>
+        <Link to={id}>
+          <p>{title}</p>
+        </Link>
         <p className="product__price">
-          <small>$</small>
+          <strong>Rs. </strong>
           <strong>{price}</strong>
         </p>
       </div>
-
-      <img src={image} alt="productPhoto" />
 
       <button>Add to Basket</button>
     </div>
